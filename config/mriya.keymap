@@ -48,6 +48,20 @@
 
             label = "MENU_A";
         };
+
+        apps_n: apps_n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp K_APPLICATION>,
+                <&macro_tap>,
+                <&kp N>,
+                <&macro_release>,
+                <&kp K_APPLICATION>;
+
+            label = "APPS_N";
+        };
     };
 
     keymap {
@@ -75,11 +89,11 @@
 
         raise_layer {
             bindings = <
-        &trans  &trans   &trans          &trans          &trans          &trans        &trans               &trans       &trans         &trans            &trans           &trans
-&trans  &none   &none    &none           &none           &none           &none         &none                &kp PAGE_UP  &kp PAGE_DOWN  &kp HOME          &kp END          &kp PRINTSCREEN    &trans
-        &trans  &menu_a  &kp LS(DELETE)  &kp LC(INSERT)  &kp LS(INSERT)  &kp DELETE    &kp LEFT             &kp DOWN     &kp UP         &kp RIGHT         &none            &mt RCTRL K_CMENU
-        &trans  &none    &none           &none           &none           &none         &kp LS(PAUSE_BREAK)  &none        &none          &kp LC(LS(HOME))  &kp LS(LC(END))  &trans
-                         &trans          &lt 3 TAB       &trans          &trans        &trans               &trans       &lt 3 DELETE   &trans
+        &trans  &trans   &trans          &trans          &trans          &trans        &trans    &trans           &trans         &trans            &trans           &trans
+&trans  &none   &none    &none           &none           &none           &none         &none     &kp PAGE_UP      &kp PAGE_DOWN  &kp HOME          &kp END          &kp PRINTSCREEN    &trans
+        &trans  &menu_a  &kp LS(DELETE)  &kp LC(INSERT)  &kp LS(INSERT)  &kp DELETE    &kp LEFT  &kp DOWN         &kp UP         &kp RIGHT         &none            &mt RCTRL K_CMENU
+        &trans  &none    &none           &none           &none           &none         &apps_n   &kp PAUSE_BREAK  &none          &kp LC(LS(HOME))  &kp LS(LC(END))  &trans
+                         &trans          &lt 3 TAB       &trans          &trans        &trans    &trans           &lt 3 DELETE   &trans
             >;
         };
 
