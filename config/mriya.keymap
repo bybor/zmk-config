@@ -30,23 +30,13 @@
             quick-tap-ms = <170>;
         };
 
-        alt_shift_behavior: alt_shift_behavior {
+        brackets_behavior: brackets_behavior {
             compatible = "zmk,behavior-mod-morph";
-            label = "ALT_SHIFT_BEHAVIOR";
-            bindings = <&kp LEFT_ALT>, <&kp LEFT_SHIFT>;
+            label = "BRACKETS_BEHAVIOR";
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_LALT)>;
-        };
-
-        raise_lang_behavior: raise_lang_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RAISE_LANG_BEHAVIOR";
-            bindings = <&mo>, <&alt_shift_behavior>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            flavor = "balanced";
+            mods = <(MOD_LALT)>;
         };
     };
 
@@ -97,11 +87,11 @@
 
         default_layer {
             bindings = <
-          &kp EQUAL         &kp N1  &kp N2           &kp N3     &kp N4                  &kp N5                      &kp N6       &kp N7              &kp N8     &kp N9                            &kp N0    &kp MINUS
-&kp LWIN  &kp GRAVE         &kp Q   &kp W            &kp E      &kp R                   &kp T                       &kp Y        &kp U               &kp I      &kp O                             &kp P     &kp LBKT              &mt LEFT_WIN RIGHT_BRACKET
-          &sb LCTRL ESCAPE  &kp A   &kp S            &kp D      &kp F                   &kp G                       &kp H        &kp J               &kp K      &kp L                             &kp SEMI  &sb RCTRL SQT
-          &kp LEFT_SHIFT    &kp Z   &kp X            &kp C      &kp V                   &kp B                       &kp N        &kp M               &kp COMMA  &kp DOT                           &kp FSLH  &mt RSHIFT BACKSLASH
-                                    &lang_momentary  &lt 1 TAB  &sb LEFT_ALT BACKSPACE  &raise_lang_behavior 2 0    &lt 2 ENTER  &sb LEFT_ALT SPACE  &lt 1 TAB  &mt LC(LEFT_SHIFT) RIGHT_CONTROL
+          &kp EQUAL         &kp N1  &kp N2           &kp N3     &kp N4                  &kp N5                  &kp N6       &kp N7              &kp N8     &kp N9                            &kp N0    &kp MINUS
+&kp LWIN  &kp GRAVE         &kp Q   &kp W            &kp E      &kp R                   &kp T                   &kp Y        &kp U               &kp I      &kp O                             &kp P     &brackets_behavior    &kp RIGHT_BRACKET
+          &sb LCTRL ESCAPE  &kp A   &kp S            &kp D      &kp F                   &kp G                   &kp H        &kp J               &kp K      &kp L                             &kp SEMI  &sb RCTRL SQT
+          &kp LEFT_SHIFT    &kp Z   &kp X            &kp C      &kp V                   &kp B                   &kp N        &kp M               &kp COMMA  &kp DOT                           &kp FSLH  &mt RSHIFT BACKSLASH
+                                    &lang_momentary  &lt 1 TAB  &sb LEFT_ALT BACKSPACE  &lt 2 LA(LEFT_SHIFT)    &lt 2 ENTER  &sb LEFT_ALT SPACE  &lt 1 TAB  &mt LC(LEFT_SHIFT) RIGHT_CONTROL
             >;
         };
 
