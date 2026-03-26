@@ -87,11 +87,11 @@
 
         default_layer {
             bindings = <
-          &kp EQUAL         &kp N1  &kp N2           &kp N3     &kp N4                  &kp N5                  &kp N6       &kp N7              &kp N8     &kp N9                            &kp N0    &kp MINUS
-&kp LWIN  &kp GRAVE         &kp Q   &kp W            &kp E      &kp R                   &kp T                   &kp Y        &kp U               &kp I      &kp O                             &kp P     &brackets_behavior    &sb LEFT_WIN RIGHT_BRACKET
-          &sb LCTRL ESCAPE  &kp A   &kp S            &kp D      &kp F                   &kp G                   &kp H        &kp J               &kp K      &kp L                             &kp SEMI  &sb RCTRL SQT
-          &kp LEFT_SHIFT    &kp Z   &kp X            &kp C      &kp V                   &kp B                   &kp N        &kp M               &kp COMMA  &kp DOT                           &kp FSLH  &mt RSHIFT BACKSLASH
-                                    &lang_momentary  &lt 1 TAB  &sb LEFT_ALT BACKSPACE  &lt 2 LA(LEFT_SHIFT)    &lt 2 ENTER  &sb LEFT_ALT SPACE  &lt 1 TAB  &mt LC(LEFT_SHIFT) RIGHT_CONTROL
+          &kp EQUAL         &kp N1  &kp N2                           &kp N3     &kp N4                  &kp N5                  &kp N6       &kp N7              &kp N8     &kp N9                            &kp N0    &kp MINUS
+&kp LWIN  &kp GRAVE         &kp Q   &kp W                            &kp E      &kp R                   &kp T                   &kp Y        &kp U               &kp I      &kp O                             &kp P     &brackets_behavior    &sb LEFT_WIN RIGHT_BRACKET
+          &sb LCTRL ESCAPE  &kp A   &kp S                            &kp D      &kp F                   &kp G                   &kp H        &kp J               &kp K      &kp L                             &kp SEMI  &sb RCTRL SQT
+          &kp LEFT_SHIFT    &kp Z   &kp X                            &kp C      &kp V                   &kp B                   &kp N        &kp M               &kp COMMA  &kp DOT                           &kp FSLH  &mt RSHIFT BACKSLASH
+                                    &mt LC(LEFT_SHIFT) LEFT_CONTROL  &lt 1 TAB  &sb LEFT_ALT BACKSPACE  &lt 2 LA(LEFT_SHIFT)    &lt 2 ENTER  &sb LEFT_ALT SPACE  &lt 1 TAB  &mt LC(LEFT_SHIFT) RIGHT_CONTROL
             >;
         };
 
@@ -107,11 +107,11 @@
 
         raise_layer {
             bindings = <
-        &kp BACKSPACE   &trans   &trans          &trans          &trans          &kp LC(LS(N0))     &kp LS(LC(N1))  &trans           &trans         &trans            &trans           &kp BACKSPACE
-&trans  &kp C_SNAPSHOT  &none    &none           &none           &none           &kp PRINTSCREEN    &none           &kp PAGE_UP      &kp PAGE_DOWN  &kp HOME          &kp END          &kp F23            &trans
-        &trans          &menu_a  &kp LS(DELETE)  &kp LC(INSERT)  &kp LS(INSERT)  &kp DELETE         &kp LEFT        &kp DOWN         &kp UP         &kp RIGHT         &kp INSERT       &mt RCTRL K_CMENU
-        &trans          &none    &none           &none           &none           &none              &apps_n         &kp PAUSE_BREAK  &none          &kp LC(LS(HOME))  &kp LS(LC(END))  &trans
-                                 &trans          &lt 3 TAB       &trans          &trans             &trans          &trans           &lt 3 DELETE   &trans
+        &kp BACKSPACE   &trans   &trans          &trans          &trans          &kp LC(LS(N0))     &kp LS(LC(N1))   &trans           &trans         &trans            &trans           &kp BACKSPACE
+&trans  &kp C_SNAPSHOT  &none    &none           &none           &none           &kp PRINTSCREEN    &none            &kp PAGE_UP      &kp PAGE_DOWN  &kp HOME          &kp END          &kp F23            &trans
+        &trans          &menu_a  &kp LS(DELETE)  &kp LC(INSERT)  &kp LS(INSERT)  &kp DELETE         &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT         &kp INSERT       &mt RCTRL K_CMENU
+        &trans          &none    &none           &none           &none           &none              &apps_n          &kp PAUSE_BREAK  &none          &kp LC(LS(HOME))  &kp LS(LC(END))  &trans
+                                 &trans          &lt 3 TAB       &trans          &lang_momentary    &lang_momentary  &trans           &lt 3 DELETE   &trans
             >;
         };
 
