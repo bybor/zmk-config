@@ -74,9 +74,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&input_en &mo 0>,
+                <&input_en &tog 0>,
                 <&macro_pause_for_release>,
-                <&input_ru>;
+                <&input_ru &tog 0>;
 
             label = "LANG_MOMENTARY";
         };
