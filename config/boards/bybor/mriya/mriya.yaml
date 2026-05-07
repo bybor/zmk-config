@@ -1,7 +1,6 @@
 identifier: mriya
 name: Mriya
 type: keyboard
-arch: arm
 toolchain:
   - zephyr
   - gnuarmemb
